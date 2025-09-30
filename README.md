@@ -76,7 +76,7 @@ pip install pandas matplotlib statsmodels seaborn numpy scipy scikit-learn numba
 - **numpy** — arrays & math → https://numpy.org/  
 - **scipy** — scientific computing & stats → https://scipy.org/  
 - **scikit-learn** — ML (SVR/SVM, CV, pipelines) → https://scikit-learn.org/  
-- **numba** — JIT acceleration (optional) → https://numba.pydata.org/
+- **numba** — required for whole-brain modeling → https://numba.pydata.org/
 
 *Optional (for some figure/modeling utilities):*  
 ```bash
