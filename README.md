@@ -5,14 +5,12 @@
 
 ---
 
-## ✨ **Project overview (TL;DR)**
+## ✨ **Project overview**
 
-- **Brain-age clocks** trained in healthy controls (HCs) across **MRI–GMV**, **fMRI–FC**, and **EEG/MEG–FC**.  
-- **Accurate age prediction** in HCs (MRI *r*≈0.84; fMRI/EEG *r*≈0.75) enables robust **Brain-Age Gaps (BAGs)**.  
-- **Stage-dependent acceleration:** HCs≈nCar < aCar < sAD < aDS < pDS < dDS; **largest effects in DS** (ΔBAG > 20 y in dDS vs HCs, structural).  
+- **Brain-age clocks** trained in healthy controls (HCs) across **MRI–GMV**, **fMRI–FC**, and **EEG/MEG–FC**, with accurate predictions.  
+- **Stage-dependent acceleration:** HCs≈nCar < aCar < sAD < aDS < pDS < dDS; **largest effects in DS**.  
 - **Early detection:** M/EEG reveals **preclinical** acceleration in PSEN1 asymptomatic carriers (aCar).  
 - **Clinico-pathological links:** Higher BAGs ↔ **worse cognition (TRS)**, **greater amyloid (centiloids)**, **higher plasma p-tau217** and **NfL**.  
-- **Timing:** BAGs diverge ~**11 y before EYO** in PSEN1 and ~**33 y earlier** in DS.  
 - **Mechanisms & targets:** Biophysical modeling suggests hyper→hypo-excitability trajectories; **cholinergic** perturbations reduce BAGs, **GABAergic** increase BAGs; **region-specific** targets identified.
 
 ---
@@ -28,7 +26,7 @@ All modalities are mapped to the **AAL** parcellation:
 - **PET** receptor/transporter maps  
 - **Gene-expression** maps
 
-**AAL tool page:** https://www.gin.cnrs.fr/en/tools/aal/  
+**AAL page:** https://www.gin.cnrs.fr/en/tools/aal/  
 **Citation:** Tzourio-Mazoyer, N., *et al.* (2002). Automated anatomical labeling of activations in SPM using a macroscopic anatomical parcellation of the MNI MRI single-subject brain. *NeuroImage*, 15(1), 273–289.
 
 ---
@@ -65,7 +63,7 @@ Clock_fMRI/
 
 ## ⚙️ **Installation**
 
-We recommend **Python ≥ 3.9**. Create/activate a virtual environment, then:
+We recommend **Python ≥ 3.9**.
 
 ```bash
 pip install pandas matplotlib statsmodels seaborn numpy scipy scikit-learn numba
@@ -113,8 +111,7 @@ pip install nilearn nibabel abagen
    python BAGs_and_associations/Plotting.py
    ```
    - Welch’s **ANOVAs** and **pairwise Welch t-tests** with **FDR-BH** correction  
-   - **Correlations (outlier-cleaned)**: **p-tau217**, **NfL**, **TRS**, **PET/centiloids**, **longitudinal BAGs**  
-   - **Only displays plots and prints stats** (no file saving)
+   - **Correlations**: **p-tau217**, **NfL**, **TRS**, **PET/centiloids**, **longitudinal BAGs** 
 
 ---
 
@@ -123,10 +120,6 @@ pip install nilearn nibabel abagen
 - **BAG** = *predicted age – chronological age*.  
 - **Models**: SVM/SVR variants trained in **HCs** per modality; evaluation via cross-validation.  
 - **Comparisons**: Heteroscedastic **Welch’s ANOVA** and **pairwise Welch t-tests**; **FDR-BH** multiple-comparisons control.  
-- **Outliers**:  
-  - **Group analyses**: ±2 SD within group.  
-  - **Correlations**: robust bivariate filtering (pairwise outlier removal).  
-- **Spaces**: AAL across SC/FC/GMV/PET/transcriptomics (see AAL citation above).
 
 ---
 
@@ -156,14 +149,6 @@ pip install nilearn nibabel abagen
 
 ---
 
-## 📣 **Cite us**
-
-> **Coronel-Oliveros, C.**, McGlinchey, E., …, Fortea, J., & Ibañez, A. (2025). *Brain clocks chart genetic risk, staging, mechanisms, and multimodal phenotypes across Down syndrome and Alzheimer’s disease.* Submitted to *Nature Medicine* (peer review).
-
-Also cite AAL and any external resource you reuse (SC OSF, PET maps, abagen, modeling repos, etc.).
-
----
-
 ## 🤝 **Support & issues**
 
 If you have questions or encounter problems, please open an **Issue** in this repository.
@@ -189,16 +174,9 @@ If you use this repository, please cite:
 
 **Coronel‑Oliveros, C., McGlinchey, E., ... , Fortea, J., & Ibáñez, A. (2025). _Brain clocks chart genetic risk, staging, mechanisms, and multimodal phenotypes across Down syndrome and Alzheimer’s disease_. Manuscript submitted for peer review at *Nature Medicine*.**
 
-**BibTeX**
-```bibtex
-@unpublished{CoronelOliveros2025BrainClocks,
-  title   = {Brain clocks chart genetic risk, staging, mechanisms, and multimodal phenotypes across Down syndrome and Alzheimer’s disease},
-  author  = {Coronel-Oliveros, Carlos and McGlinchey, Eimear and others and Fortea, Juan and Ibáñez, Agustin},
-  year    = {2025},
-  note    = {Manuscript submitted for peer review at Nature Medicine},
-}
-```
+Also cite AAL and any external resource you reuse (SC OSF, PET maps, abagen, modeling repos, etc.).
 
+```
 
 ## 📬 Contact
 
