@@ -1,0 +1,13 @@
+numpy>=1.26,<2.3
+pandas>=2.2
+scipy>=1.15
+scikit-learn>=1.7,<1.8
+statsmodels>=0.14.5
+matplotlib>=3.10
+seaborn>=0.13.2
+openpyxl>=3.1.5
+nibabel>=5.3
+neuromaps>=0.0.5
+surfplot>=0.2
+brainsmash==0.11.0
+dcor==0.6
